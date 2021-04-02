@@ -1,5 +1,5 @@
 const { WebClient, LogLevel } = require('@slack/web-api');
-const web = new WebClient("xoxb-2777428522-1916166850306-7jaSIEug0AWmVh3Su8KXIRq8", {
+const web = new WebClient("token", {
     logLevel: LogLevel.DEBUG
 });
 const fs = require('fs');
@@ -9,8 +9,8 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
-//const conversationId = 'C01SH5WC2P9'; // testing
-const conversationId = 'CKG919Y8H'; // pi-support
+const conversationId = 'C01SH5WC2P9'; // testing
+// const conversationId = 'CKG919Y8H'; // pi-support
 
 const isInProgress = (reactions) => {
     for(let reaction of reactions) {
